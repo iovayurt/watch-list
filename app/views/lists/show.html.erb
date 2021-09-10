@@ -1,12 +1,20 @@
 <h1><%= @list.name %> </h1>
 
-<ul>
+
     <% @list.movies.each do |movie| %>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h2></h2>
+        <p> <strong></strong> .</p>
+
+
         <% bookmark = Bookmark.find_by(movie: movie, list: @list) %>
-        <li><%= movie.title %> | <%= link_to "X", bookmark_path(bookmark), method: :delete %></li>
+        <%= movie.title %> | <%= link_to "X", bookmark_path(bookmark), method: :delete %>
+        </div>
+      </div>
     <% end %>
 
-</ul>
 
 
 <%= link_to "ADD BOOKMARK", new_list_bookmark_path(@list) %>
