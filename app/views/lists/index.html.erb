@@ -7,4 +7,13 @@
 <% end %>
 </ul>
 
+
+
 <%= link_to "NEW LIST", new_list_path %>
+
+<%= cl_image_tag("https://res.cloudinary.com/dvlddajud/image/upload/v1631265273/vgihni0adhg6hjcds9k1.jpg",
+      width: 400, height: 300, crop: :fill) %>
+
+<!-- for face detection -->
+<%= cl_image_tag("https://res.cloudinary.com/dvlddajud/image/upload/v1631264754/sample.jpg",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
