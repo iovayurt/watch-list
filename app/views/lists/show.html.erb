@@ -1,6 +1,6 @@
 <h1><%= @list.name %> </h1>
 
-
+<div class="movies">
     <% @list.movies.each do |movie| %>
     <div class="card-product">
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
@@ -14,7 +14,8 @@
         </div>
       </div>
     <% end %>
+</div>
 
-
-
-<%= link_to "ADD BOOKMARK", new_list_bookmark_path(@list) %>
+<div class="new-list">
+  <%= link_to "ADD BOOKMARK", new_list_bookmark_path(@list) %>
+</div>
